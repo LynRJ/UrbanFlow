@@ -1,0 +1,40 @@
+{
+  "name": "PointsTransaction",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "earned",
+        "redeemed"
+      ]
+    },
+    "points": {
+      "type": "number"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "carpool",
+        "transit",
+        "parking",
+        "redemption",
+        "bonus"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "partner_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "points",
+    "category"
+  ]
+}

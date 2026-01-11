@@ -1,0 +1,43 @@
+{
+  "name": "ParkingSession",
+  "type": "object",
+  "properties": {
+    "spot_id": {
+      "type": "string",
+      "description": "Parking spot identifier"
+    },
+    "location_name": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "expired",
+        "extended",
+        "completed"
+      ],
+      "default": "active"
+    },
+    "hourly_rate": {
+      "type": "number"
+    },
+    "total_cost": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "spot_id",
+    "location_name",
+    "start_time",
+    "end_time"
+  ]
+}

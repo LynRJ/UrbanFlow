@@ -1,0 +1,47 @@
+{
+  "name": "Reward",
+  "type": "object",
+  "properties": {
+    "partner_name": {
+      "type": "string"
+    },
+    "partner_logo": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "petrol",
+        "cafe",
+        "shopping",
+        "entertainment",
+        "travel"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "points_required": {
+      "type": "number"
+    },
+    "discount_value": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "partner_name",
+    "category",
+    "title",
+    "points_required"
+  ]
+}
