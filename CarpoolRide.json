@@ -1,0 +1,64 @@
+{
+  "name": "CarpoolRide",
+  "type": "object",
+  "properties": {
+    "driver_id": {
+      "type": "string"
+    },
+    "driver_name": {
+      "type": "string"
+    },
+    "from_location": {
+      "type": "string"
+    },
+    "to_location": {
+      "type": "string"
+    },
+    "departure_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "available_seats": {
+      "type": "number"
+    },
+    "price_per_seat": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "booked",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "default": "available"
+    },
+    "passengers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "vehicle_info": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "from_location",
+    "to_location",
+    "departure_time"
+  ]
+}
